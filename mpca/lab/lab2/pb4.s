@@ -1,0 +1,9 @@
+.text 
+    MOV R1,#0b0101
+    MOV R2,#0b0100
+    
+    CMP R1,R2
+    ADDEQ R0,R1,R2
+    SUBNE R0,R1,R2 
+
+SWI 0X011
