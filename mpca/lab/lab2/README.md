@@ -2,22 +2,30 @@
 ---
 
 1. **Write an ALP (Assembly Language Program) to perform the addition of two numbers:**
-   - **64-bit addition**
-   - **128-bit addition**, where the result is saved in a register and reused.
+   
+   a) **64-bit addition**
+   
+   b) **128-bit addition**, where the result is saved in a register and reused.
 
-   Example (64-bit addition):  
-       R1  R0  
-   +<u>R3  R2</u>  
-   C   R5  R4  *(You may store the result back into R3, R2.)*
+   Example (64-bit addition):
 
-2. **Write an ALP to find the 2's complement of a number using only `MOV` and `RSB`.**
+|   | 32 + 32 bit|
+|---|--------|
+|   | R1 &nbsp;R0 | 
+| `+` | R3 &nbsp;R2 | 
+|---|--------|
+| C  | R5 &nbsp;  R4 |
 
-3. **Write an ALP to find the 1's complement (`NOT`) of a number using `MOV` and bitwise logical instructions.**
+ *(You may store the result back into R3, R2.)*
 
-4. **Write an ALP to subtract two numbers if they are equal; otherwise, add them.**
+3. **Write an ALP to find the 2's complement of a number using only `MOV` and `RSB`.**
 
-5. **Write an ALP to check if a number is even or odd.**
+4. **Write an ALP to find the 1's complement (`NOT`) of a number using `MOV` and bitwise logical instructions.**
 
-6. **Write an ALP to find the factorial of a number.**
+5. **Write an ALP to subtract two numbers if they are equal; otherwise, add them.**
 
-7. **Write an ALP to find the GCD of two numbers.**
+6. **Write an ALP to check if a number is even or odd.**
+
+7. **Write an ALP to find the factorial of a number.**
+
+8. **Write an ALP to find the GCD of two numbers.**
