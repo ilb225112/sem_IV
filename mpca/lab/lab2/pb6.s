@@ -1,3 +1,4 @@
+.text 
     MOV R0, #7
     MOV R1, #1
 
