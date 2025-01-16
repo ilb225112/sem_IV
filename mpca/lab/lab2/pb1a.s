@@ -8,7 +8,7 @@
     ADCS R3,R1,R3 ; Add with carry from C bit
 SWI 0X011
 
-@ R1 R0 -> 0000 0000   1111 1111
-@ R3 R2 -> 1111 1111   0000 0000
-@ add   -> 1111 1111   1111 1111   = ans
+@ R1 R0 -> 0x00000000   0xFFFFFFFF
+@ R3 R2 -> 0xFFFFFFFF   0x00000000  
+@ add   -> 0xFFFFFFFF   0xFFFFFFFF   = ans
 
