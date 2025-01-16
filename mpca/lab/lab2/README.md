@@ -18,14 +18,14 @@
 
  *(You may store the result back into R3, R2.)*
 
-3. **Write an ALP to find the 2's complement of a number using only `MOV` and `RSB`.**
+2. **Write an ALP to find the 2's complement of a number using only `MOV` and `RSB`.**
 
-4. **Write an ALP to find the 1's complement (`NOT`) of a number using `MOV` and bitwise logical instructions.**
+3. **Write an ALP to find the 1's complement (`NOT`) of a number using `MOV` and bitwise logical instructions.**
 
-5. **Write an ALP to subtract two numbers if they are equal; otherwise, add them.**
+4. **Write an ALP to subtract two numbers if they are equal; otherwise, add them.**
 
-6. **Write an ALP to check if a number is even or odd.**
+5. **Write an ALP to check if a number is even or odd.**
 
-7. **Write an ALP to find the factorial of a number.**
+6. **Write an ALP to find the factorial of a number.**
 
-8. **Write an ALP to find the GCD of two numbers.**
+7. **Write an ALP to find the GCD of two numbers.**
