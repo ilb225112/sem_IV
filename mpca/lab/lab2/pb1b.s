@@ -9,8 +9,8 @@
     MOV R7,R0
 
     ADDS R4,R0,R4
-    ADDS R5,R1,R5
-    ADDS R6,R2,R6
+    ADCS R5,R1,R5
+    ADCS R6,R2,R6
     ADCS R7,R3,R7 
 SWI 0X011
 
