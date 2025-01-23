@@ -1,0 +1,9 @@
+.text
+	MOV R1,#31	  ;31*16
+	MOV R2,R1, LSL #4
+
+	MOV R4,#16	  ;16*31
+	MOV R5,R4, LSL #5
+	SUB R5,R5,R4
+SWI 0X011
+	
