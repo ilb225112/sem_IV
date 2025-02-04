@@ -1,4 +1,4 @@
-# LAB-4 Questions : 23-01-2025
+# LAB-4 Questions : 30-01-2025
 
 ## 1. Find the Remainder of a Number
 Write an ALP using ARM7TDMI to find the remainder of a number (e.g., `10 / 3`, remainder is `1`).
