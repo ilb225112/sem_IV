@@ -100,6 +100,7 @@ CTRL + X -> Y -> Enter
 - Open **Wireshark** :
    ![image](https://github.com/user-attachments/assets/d2dd57be-ed05-4f66-92ae-0adbef46255c)
   Click on the one which mathches ip u noted and click on Start Capturing
+  Here we got match with ***vEthernet***
   Go back to firefox and Ctrl + Shift + R
   
 ---
