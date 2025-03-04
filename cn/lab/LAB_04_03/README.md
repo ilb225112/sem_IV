@@ -25,9 +25,10 @@ B) Open the other tab and one after the other type below commands :<BR>
 1. ```sh
    dig www.google.com
    ```
-   open wireshark apply filter ```sh
+   open wireshark apply filter
+   ```sh
    udp.port==53
-       ```
+   ```
    ![a](https://github.com/user-attachments/assets/b0239d31-e5f6-4e7e-8341-b3e44a0e02e6)
    ![acmd](https://github.com/user-attachments/assets/16f548ef-9d18-475c-ad91-63457ee709b5)
 
