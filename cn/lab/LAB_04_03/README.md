@@ -9,7 +9,7 @@ Note down your IP address before proceeding
 ## **Step 1: Open CMD**
 A) Open Two tabs and in both run below command
   ```sh
-  Ubuntu
+   Ubuntu
   ```
 - In one of Tabs Run
   ```sh
