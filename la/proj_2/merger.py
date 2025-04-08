@@ -1,10 +1,20 @@
+import subprocess
+import sys
+
+# Auto install missing packages
+def install(package):
+    try:
+        __import__(package)
+    except ImportError:
+        print(f"📦 Installing missing package: {package} ...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+install("nbformat")
+install("nbconvert")
+
 import os
 import nbformat
 import re
-from nbconvert import PDFExporter
-
-# 💡 Set your desired PDF name here (no need to add .pdf)
-custom_name = "SRN"
 
 def extract_lab_number(filename):
     match = re.search(r'lab(\d+)\.ipynb', filename)
@@ -12,7 +22,6 @@ def extract_lab_number(filename):
 
 base_dir = os.getcwd()
 
-# Collect .ipynb files from first-level subdirs
 notebooks = []
 for subdir in os.listdir(base_dir):
     full_path = os.path.join(base_dir, subdir)
@@ -25,8 +34,8 @@ for subdir in os.listdir(base_dir):
 notebooks.sort()
 
 if not notebooks:
-    print("No notebooks found.")
-    exit()
+    print("❌ No notebooks found.")
+    sys.exit()
 
 # Merge notebooks
 merged_nb = None
@@ -38,13 +47,9 @@ for _, path in notebooks:
         else:
             merged_nb.cells.extend(nb.cells)
 
-# Export to PDF with custom name
-try:
-    pdf_exporter = PDFExporter()
-    pdf_data, _ = pdf_exporter.from_notebook_node(merged_nb)
-    with open(f"{custom_name}.pdf", "wb") as f:
-        f.write(pdf_data)
-    print(f"✅ PDF created: {custom_name}.pdf")
-except Exception as e:
-    print("❌ PDF conversion failed. Make sure TeX and pandoc are installed.")
-    print(e)
+# Save merged notebook
+output_file = "merged_notebooks.ipynb"
+with open(output_file, 'w', encoding='utf-8') as f:
+    nbformat.write(merged_nb, f)
+
+print(f"✅ Merged notebook saved as: {output_file}")
