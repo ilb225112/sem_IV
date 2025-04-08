@@ -1,5 +1,8 @@
 import subprocess
 import sys
+import os
+import nbformat
+import re
 
 # Auto install missing packages
 def install(package):
@@ -7,20 +10,20 @@ def install(package):
         __import__(package)
     except ImportError:
         print(f"📦 Installing missing package: {package} ...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+        try:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+        except subprocess.CalledProcessError as e:
+            print(f"❌ Failed to install {package}: {e}")
+            sys.exit(1)
 
 install("nbformat")
-install("nbconvert")
-
-import os
-import nbformat
-import re
+install("nbconvert")  # Used even if not directly in the script, might be needed later
 
 # Ask for SRN
 srn = input("Enter your SRN: ").strip()
 if not srn:
     print("❌ SRN cannot be empty.")
-    sys.exit()
+    sys.exit(1)
 
 def extract_lab_number(filename):
     match = re.search(r'lab(\d+)\.ipynb', filename)
@@ -29,19 +32,17 @@ def extract_lab_number(filename):
 base_dir = os.getcwd()
 
 notebooks = []
-for subdir in os.listdir(base_dir):
-    full_path = os.path.join(base_dir, subdir)
-    if os.path.isdir(full_path):
-        for file in os.listdir(full_path):
-            if file.endswith(".ipynb") and file.startswith("lab"):
-                path = os.path.join(full_path, file)
-                notebooks.append((extract_lab_number(file), path))
+for root, _, files in os.walk(base_dir):
+    for file in files:
+        if file.endswith(".ipynb") and file.startswith("lab"):
+            full_path = os.path.normpath(os.path.join(root, file))
+            notebooks.append((extract_lab_number(file), full_path))
 
 notebooks.sort()
 
 if not notebooks:
     print("❌ No notebooks found.")
-    sys.exit()
+    sys.exit(1)
 
 # Merge notebooks
 merged_nb = None
