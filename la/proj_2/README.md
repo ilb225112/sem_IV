@@ -17,6 +17,10 @@ __Do u have python and want to merge all .ipynb files?__
     ```bash
     python merger.py
     ```
+    OR
+    ```bash
+    python3 merger.py
+    ```
   - It will ask for srn (basically merged file ka name)
   - Once entered it saves the merged notebook with your SRN as the filename
 
