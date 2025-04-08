@@ -16,6 +16,12 @@ import os
 import nbformat
 import re
 
+# Ask for SRN
+srn = input("Enter your SRN: ").strip()
+if not srn:
+    print("❌ SRN cannot be empty.")
+    sys.exit()
+
 def extract_lab_number(filename):
     match = re.search(r'lab(\d+)\.ipynb', filename)
     return int(match.group(1)) if match else float('inf')
@@ -48,7 +54,7 @@ for _, path in notebooks:
             merged_nb.cells.extend(nb.cells)
 
 # Save merged notebook
-output_file = "merged_notebooks.ipynb"
+output_file = f"{srn}.ipynb"
 with open(output_file, 'w', encoding='utf-8') as f:
     nbformat.write(merged_nb, f)
 
