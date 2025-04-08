@@ -22,3 +22,8 @@ __Do u have python and want to merge all .ipynb files?__
 
 ## Final :
   - Use any online website/tool to convert the .ipynb file to .pdf
+
+> ⚠️ **Note:**  
+> Do **not** run the merged `.ipynb` file.  
+> You may run the individual files, as all dependencies are in the same folder.
+
