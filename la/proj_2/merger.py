@@ -1,7 +1,6 @@
 import subprocess
 import sys
 import os
-import nbformat
 import re
 
 # Auto install missing packages
@@ -18,6 +17,7 @@ def install(package):
 
 install("nbformat")
 install("nbconvert")  # Used even if not directly in the script, might be needed later
+import nbformat
 
 # Ask for SRN
 srn = input("Enter your SRN: ").strip()
