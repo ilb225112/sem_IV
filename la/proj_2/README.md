@@ -10,6 +10,7 @@ git sparse-checkout set la/proj_2
 git checkout
 cd la
 cd proj_2
+
 ```
 
 ## Additional 💡:
