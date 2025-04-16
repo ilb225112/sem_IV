@@ -8,7 +8,8 @@ cd sem_IV
 git sparse-checkout init --cone
 git sparse-checkout set la/proj_2
 git checkout
-
+cd la
+cd proj2
 ```
 
 ## Additional 💡:
@@ -22,8 +23,15 @@ __Do u have python and want to merge all .ipynb files?__
     python3 merger.py
     ```
   - It will ask for srn (basically merged file ka name)
-  - Once entered it saves the merged notebook with your SRN as the filename
-
+  - Once entered it saves the merged notebook with your SRN as the filename.
+    <br>
+### **Note:**  If u see an error like this
+  ![WhatsApp Image 2025-04-16 at 09 32 26_1ccb75a1](https://github.com/user-attachments/assets/7b5d25e8-2f16-499d-a296-42a733ae8ed9)<br>
+  run :
+  ```bash
+    pip install nbformat
+  ```
+ and rerun python file.
 ## Final :
   - Use any online website/tool to convert the .ipynb file to .pdf
 
