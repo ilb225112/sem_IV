@@ -9,7 +9,7 @@ git sparse-checkout init --cone
 git sparse-checkout set la/proj_2
 git checkout
 cd la
-cd proj2
+cd proj_2
 ```
 
 ## Additional 💡:
