@@ -7,7 +7,8 @@ NOTE : **Following is done using a single device**
 ### **For Server side**
   - Install Ubuntu using wsl command
       ```bash
-       wsl --install ubuntu ```
+       wsl --install ubuntu
+      ```
   - Run the following cmds:
       ```bash
        sudo apt update
@@ -94,8 +95,9 @@ CTRL + X -> Y -> Enter
     - in search bar below
       network.http.max-persistent-connections-per-server
     - change the value as per req
-      Ctrl + Shift +R
-    - Open new tab : Paste the ip u copied and press enter
+> Press `Ctrl + Shift + R` to refresh the page without cache.
+
+  - Open new tab : Paste the ip u copied and press enter
   
 - Open **Wireshark** :
    ![image](https://github.com/user-attachments/assets/d2dd57be-ed05-4f66-92ae-0adbef46255c)
